@@ -1,15 +1,15 @@
 <template>
   <div>
     This is Home Page
-    <task></task>
+    <task-card></task-card>
   </div>
 </template>
 
 <script>
-import Task from "@/components/Task";
+import TaskCard from "@/components/TaskCard";
 export default {
   name: "Home",
-  components: {Task},
+  components: {TaskCard},
 }
 
 </script>
