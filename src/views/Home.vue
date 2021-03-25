@@ -1,7 +1,7 @@
 <template>
   <div>
     This is Home Page
-    <task-card></task-card>
+    <task-card id="1" title="New task" status="2" detail="Many details"></task-card>
   </div>
 </template>
 
