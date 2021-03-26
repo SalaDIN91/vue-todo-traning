@@ -2,7 +2,8 @@
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div>
-      <router-link to="home">Go home</router-link>
+      <div> Lang is {{lang}}</div>
+      <router-link :to="{name: 'Home'}">Go home</router-link>
     </div>
     <router-view/>
   </div>
@@ -14,6 +15,11 @@
 
 export default {
   name: 'App',
+  data: function () {
+    return {
+      lang: 'ru'
+    }
+  },
   components: {
 
   }

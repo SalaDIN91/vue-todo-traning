@@ -2,7 +2,7 @@
   <div>
     <div>{{id}}</div>
     <div>{{title}}</div>
-    <div>{{status}}</div>
+    <div>{{done}}</div>
     <div>{{detail}}</div>
   </div>
 </template>
@@ -19,8 +19,8 @@ export default {
       type: String,
       required: true,
     },
-    status:{
-      type: Number,
+    done:{
+      type: Boolean,
       required: true,
     },
     detail:{
