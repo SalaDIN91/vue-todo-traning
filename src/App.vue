@@ -2,7 +2,7 @@
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <div>
-      <div> Lang is {{lang}}</div>
+      <div> Lang of APP is {{lang}}</div>
       <router-link :to="{name: 'Home'}">Go home</router-link>
     </div>
     <router-view/>
@@ -11,17 +11,25 @@
 
 <script>
 
-
+/*export var store = {
+  state:{
+    lang: 'ru',
+  },
+  changeLangAction(newLang){
+    store.state.lang = newLang
+  }
+}*/
+import {store} from "@/store";
 
 export default {
   name: 'App',
-  data: function () {
-    return {
-      lang: 'ru'
-    }
-  },
   components: {
 
+  },
+  computed:{
+    lang(){
+      return store.lang
+    }
   }
 }
 </script>

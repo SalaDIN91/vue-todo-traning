@@ -1,13 +1,16 @@
 <template>
   <div>
     <div>{{id}}</div>
-    <div>{{title}}</div>
+    <div>{{title}} AND LANG IS {{lang}}</div>
     <div>{{done}}</div>
     <div>{{detail}}</div>
+    <button @click="setLang('ru');">RU</button>
   </div>
 </template>
 
 <script>
+import {mutations, store} from "@/store";
+
 export default {
   name: "TaskCard",
   props:{
@@ -26,6 +29,14 @@ export default {
     detail:{
       type: String,
     }
+  },
+  computed:{
+    lang(){
+      return store.lang
+    },
+  },
+  methods:{
+    setLang: mutations.setLang
   }
 }
 </script>

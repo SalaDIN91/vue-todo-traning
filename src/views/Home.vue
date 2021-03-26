@@ -4,15 +4,17 @@
     <div>
       <div>And this is TODO LIST</div>
       <task-card v-for="task in tasks" :id=task.id :title=task.title :done=task.done :detail=task.detail :key="task.id"></task-card>
+      <experiment></experiment>
     </div>
   </div>
 </template>
 
 <script>
 import TaskCard from "@/components/TaskCard";
+import Experiment from "@/components/experiment";
 export default {
   name: "Home",
-  components: {TaskCard},
+  components: {Experiment, TaskCard},
   data: function (){
     return {
       tasks:[
