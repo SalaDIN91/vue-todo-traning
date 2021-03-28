@@ -1,11 +1,24 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 
-export const store = Vue.observable({
-    lang: 'ru'
-});
+Vue.use(Vuex)
 
-export const mutations = Vue.observable({
-    setLang(lang){
-        store.lang = lang
+const store = new Vuex.Store({
+    state:{
+        language: 'ru',
+        count:0,
+    },
+    mutations:{
+        setLanguage(state, lang){
+            state.language = lang
+        },
+        incrementCount(state){
+            state.count++
+        },
+        decrementCount(state){
+            state.count--
+        }
     }
-});
+})
+
+export default store
