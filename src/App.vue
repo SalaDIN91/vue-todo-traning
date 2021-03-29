@@ -7,6 +7,7 @@
       <button @click="incrementCount">Increment</button>
       <button @click="decrementCount">Decrement</button>
       <router-link :to="{name: 'Home'}">Go home</router-link>
+      <router-link :to="{name: 'Experiment'}">Go to experiment</router-link>
     </div>
     <router-view/>
   </div>
